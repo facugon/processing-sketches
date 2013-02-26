@@ -4,8 +4,10 @@ class Hotpoint {
     color fillColor;
     color strokeColor;
     int size;
+
     int pointsIncluded;
     int maxPoints;
+
     boolean wasJustHit;
     int threshold;
 
@@ -16,6 +18,11 @@ class Hotpoint {
         maxPoints = 1000;
         threshold = 0;
         fillColor = strokeColor = color(random(255), random(255), random(255));
+    }
+    
+    void setColor(color aColor) {
+      this.fillColor = aColor ;
+      this.strokeColor = aColor ;
     }
 
     void setThreshold( int newThreshold ){
