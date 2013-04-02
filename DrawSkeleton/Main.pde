@@ -1,6 +1,8 @@
 import processing.opengl.*;
 import SimpleOpenNI.*;
+
 SimpleOpenNI kinect;
+
 void setup() {
     size(1028, 768, OPENGL);
     kinect = new SimpleOpenNI(this);
@@ -9,6 +11,7 @@ void setup() {
     kinect.setMirror(true);
     fill(255, 0, 0);
 }
+
 void draw() {
     kinect.update();
     background(255);
