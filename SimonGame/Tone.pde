@@ -20,7 +20,7 @@ public class Tone {
   //Allowable true,false
   boolean bigEndian = true;  
 
-  byte[] audioData = new byte[16000*4]; // two seconds of monaural (one-channel) data or one second of stereo (two-channel) data.
+  byte[] audioData = new byte[16000*1];
 
   Tone(double aFreq) {
     new SynGen(aFreq).getSyntheticData(audioData); // like a factory method. get the synsound data
@@ -113,7 +113,6 @@ public class Tone {
 
         //Get and display the elapsed time for the previous playback.
         int elapsedTime = (int)(new Date().getTime() - startTime);
-        println("elapsed time " + elapsedTime);
 
         //Finish with the SourceDataLine
         sourceDataLine.stop();

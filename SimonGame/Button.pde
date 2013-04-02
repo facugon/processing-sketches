@@ -2,12 +2,14 @@
 class SimonButton {
   Tone tone ;
   Hotpoint trigger ;
-  SimonGame simon ;
+  Simon simon ;
+  String name ;
   
   boolean isPushed=false;
 
-  SimonButton(SimonGame simon, int x, int y, int z, int aSize, color aColor, Tone aTone)
+  SimonButton(String name, Simon simon, int x, int y, int z, int aSize, color aColor, Tone aTone)
   {
+    this.name = name ;
     this.trigger = new Hotpoint(x, y, z, aSize, aColor);
     this.tone = aTone;
     this.simon = simon ;
