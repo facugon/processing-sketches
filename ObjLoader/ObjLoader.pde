@@ -50,5 +50,14 @@ void keyPressed()
 
  
   if(key == 'r')  reset();
+  if(key == 'x') eyeX-=10;
+  if(key == 'X') eyeX+=10;
+  
+    if(key == 'y') eyeY-=10;
+  if(key == 'Y') eyeY+=10;
+  
+    if(key == 'z') eyeZ-=10;
+  if(key == 'Z') eyeZ+=10;
+  
   
 }
