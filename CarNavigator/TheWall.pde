@@ -24,7 +24,8 @@ class TheWall {
         sides = dSides;
 
         textureMode(NORMAL);
-        aTexture = loadImage("briks3.jpg");
+        //aTexture = loadImage("briks3.jpg");
+
         
         direction = PVector.sub(end, start);
         direction.normalize();
@@ -40,7 +41,6 @@ class TheWall {
 
     PShape texturedBox(float xs,float ys,float zs)
     {
-        noStroke();
         xs = xs / 2;
         ys = ys / 2;
         zs = zs / 2;
@@ -79,12 +79,14 @@ class TheWall {
         box.vertex(-1*xs ,  1*ys , -1*zs , 0 , 1);
         
         box.translate(0,0,sides.z/2);
+        box.stroke(255);
+        box.fill(0,255,0);
         box.end(CLOSE);
         return box;
     }
 
     void draw()
-    {
+    { 
         for (int row=0 ; row<rows ; row++) {
             
             for (int col=0 ; col<cols ; col++) {

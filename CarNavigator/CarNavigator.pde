@@ -62,7 +62,6 @@ void setup()
   new PVector( 240, 240, 0), 
   new PVector( 120, 120, -10)
     );
-  floor.setTexture(loadImage("briks2.jpg"));
   
     car.translate(0, 0, 10);
 
@@ -82,4 +81,17 @@ void draw() {
   shape(car, 0, 0);
 }
 
+void keyPressed()
+{
+  if(key == 'x')
+  car.translate(5,0,0);
+    if(key == 'X')
+  car.translate(-5,0,0);
 
+  if(key == 'y')
+  car.translate(0,5,0);
+
+  if(key == 'Y')
+  car.translate(0,-5,0);
+
+}
